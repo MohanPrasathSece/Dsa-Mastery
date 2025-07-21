@@ -1,0 +1,19 @@
+package First.src.day2;
+
+public class FindMin {
+    public static void main(String[] args) {
+        int[] arr = {100,200,3,4,5,6,7,8};
+        int ans = MinArray(arr);
+        System.out.println(ans);
+    }
+
+    static int MinArray(int[] arr){
+        int minVal = arr[0];
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] < minVal){
+                minVal = arr[i];
+            }
+        }
+        return minVal;
+    }
+}
