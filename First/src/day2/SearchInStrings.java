@@ -3,20 +3,19 @@ package First.src.day2;
 public class SearchInStrings {
     public static void main(String[] args) {
         String name = "Mohan";
-        char target = 'n';
+        char target = 'a';
         int ans = StringSearch(name, target);
         System.out.println(ans);
     }
 
-    static int StringSearch(String name, char target){
-        if(name.length() == 0){
-            return -1;
-        }
-        for(int i = 0; i < name.length(); i++){
-            if(name.charAt(i) == target){
+   static int StringSearch(String name, char target){
+        int i = 0;
+        while(i < name.length()){
+            if(target == name.charAt(i)){
                 return i;
             }
+            i++;
         }
         return -1;
-    }
+   }
 }
